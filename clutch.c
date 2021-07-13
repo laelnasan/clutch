@@ -1,3 +1,4 @@
+#include "compat-5.2.h"
 #include <lauxlib.h>
 #include <lua.h>
 #include <sqlite3.h>

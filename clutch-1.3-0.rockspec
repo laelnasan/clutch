@@ -1,7 +1,7 @@
 package = "clutch"
 version = "1.3-0"
 source = {
-    url = "git://github.com/akojo/clutch",
+    url = "git://github.com/laelnasan/clutch",
     tag = "v1.3.0"
 }
 description = {
@@ -12,17 +12,17 @@ description = {
         parsing the results returned by queries, allowing you to concentrate
         on writing application code.
     ]],
-    homepage = "https://github.com/akojo/clutch",
+    homepage = "https://github.com/laelnasan/clutch",
     license = "MIT"
 }
 dependencies = {
-    "lua >= 5.2"
+    "lua >= 5.1"
 }
 build = {
     type = "builtin",
     modules = {
         clutch = {
-            sources = "clutch.c",
+            sources = {"clutch.c", "compat-5.2.c"},
             libraries = {"sqlite3"},
             incdirs = {"$(LIBSQLITE3_INCDIR)"},
             libdirs = {"$(LIBSQLITE3_LIBDIR)"}
